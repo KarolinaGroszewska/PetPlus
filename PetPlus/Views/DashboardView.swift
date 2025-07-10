@@ -27,15 +27,13 @@ struct DashboardView: View {
                     .padding()
                 Text("Hello,")
                     .font(.custom("Poppins-Regular", size: 15))
-                    .foregroundColor(.accentColorDark)
                 Text("\(samplePetList[0].name)!")
                     .font(.custom("Poppins-SemiBold", size: 15))
                     .padding(.leading, -3)
-                    .foregroundColor(.accentColorDark)
                 Spacer()
                 Image(systemName: "bell")
                     .font(.system(size: 32))
-                    .foregroundColor(.accentColorDark)
+                    .padding(.trailing)
                 
             }
             VStack{
@@ -82,6 +80,7 @@ struct DashboardView: View {
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .padding()
         }
+        .foregroundColor(.accentColorDark)
     }
 }
 
