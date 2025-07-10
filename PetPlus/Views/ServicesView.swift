@@ -1,20 +1,14 @@
 //
-//  ContentView.swift
+//  ServicesView.swift
 //  PetPlus
 //
-//  Created by Kari Groszewska on 7/5/25.
+//  Created by Kari Groszewska on 7/9/25.
 //
 
 import SwiftUI
 
-class Pet: Identifiable {
-    var name: String = "Test"
-    var image: String = "blank"
-}
-
-struct DashboardView: View {
-    @State var sampleUsername = "Test"
-    @State var samplePetList = [Pet(), Pet(), Pet(), Pet(), Pet()]
+struct ServicesView: View {
+    @State var samplePetList = [Pet(), Pet(), Pet()]
     @State var currentPet = 1
     var body: some View {
         ScrollView {
@@ -36,7 +30,7 @@ struct DashboardView: View {
                 Image(systemName: "bell")
                     .font(.system(size: 32))
                     .foregroundColor(.accentColorDark)
-                
+
             }
             VStack{
                 Label("My Pets", systemImage: "pawprint")
@@ -67,15 +61,9 @@ struct DashboardView: View {
             .clipShape(RoundedRectangle(cornerRadius: 10))
             .padding()
             VStack {
-                Label("Upcoming", systemImage: "timer")
+                Text("Upcoming Vaccines")
                     .font(.custom("Poppins-SemiBold", size: 30))
-                Label("Food Restock", systemImage: "fork.knife")
-                    .font(.custom("Poppins-Regular", size: 21))
-                Label("Grooming Appointment", systemImage: "scissors.badge.ellipsis")
-                    .font(.custom("Poppins-Regular", size: 21))
-                Label("Vet Visit", systemImage: "cross.fill")
-                    .font(.custom("Poppins-Regular", size: 21))
-
+                
             }
             .frame(maxWidth: .infinity)
             .background(.accent)
@@ -86,5 +74,5 @@ struct DashboardView: View {
 }
 
 #Preview {
-    DashboardView()
+    ServicesView()
 }

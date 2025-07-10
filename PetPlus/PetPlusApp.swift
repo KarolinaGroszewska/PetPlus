@@ -10,6 +10,9 @@ import SwiftData
 
 @main
 struct PetPlusApp: App {
+    init() {
+     UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: UIFont.init(name: "Poppins-Regular", size: 12)! ], for: .normal)
+    }
 //    var sharedModelContainer: ModelContainer = {
 //        let schema = Schema([
 //            Item.self,
@@ -25,7 +28,7 @@ struct PetPlusApp: App {
 
     var body: some Scene {
         WindowGroup {
-            DashboardView()
+            MainTabView()
         }
 //        .modelContainer(sharedModelContainer)
     }
